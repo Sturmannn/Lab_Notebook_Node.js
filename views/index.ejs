@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Заметки</title>
+  </head>
+  <body>
+    <h1>Электронная записная книжка</h1>
+    <form action="/addNote" method="post">
+      <div id="notes">
+        <label for="content">Заметка:</label>
+        <textarea id="content" cols="20" name="content" required></textarea>
+        <br /><br />
+      </div>
+
+      <div id="tags">
+        <label for="tags">Метки</label>
+        <input type="text" id="tags" name="tags" />
+        <!-- <input type="submit" value="Отправить" /> -->
+        <br /><br />
+      </div>
+
+      <div id="fileUpload">
+        <label for="files">Загрузить файлы</label>
+        <input type="file" name="files" multiple /><br />
+        <br /><br />
+      </div>
+
+      <input type="submit" value="Добавить" />
+    </form>
+  </body>
+</html>
