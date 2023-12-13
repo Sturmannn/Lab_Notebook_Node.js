@@ -1,4 +1,7 @@
 create TABLE Notes(
     id SERIAL PRIMARY KEY,
-    content VARCHAR(255)
+    title VARCHAR(255),
+    content TEXT,
+    tags VARCHAR(255),
+    paths_to_files TEXT
 );

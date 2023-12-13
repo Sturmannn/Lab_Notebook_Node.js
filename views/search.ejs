@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/style.css">
-    <title>Search</title>
-</head>
-<body>
-    <input id="search_field" type="text" placeholder="Искать" data-action="/search">
-    <button id="search_button">Поиск</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/navigation.css" />
+    <title>Поиск Заметки</title>
+  </head>
+  <body>
+    <%- include('navigation.ejs') %>
+    <h1>Электронная записная книжка</h1>
+    <h2>Поиск по:</h2>
+
+    <div class="custom-select">
+      <!-- <form action="/search" method="post"> -->
+      <!-- <form> -->
+      <input type="radio" id="title" name="searchType" value="title" checked />
+      <label for="title">Заголовок</label>
+
+      <input type="radio" id="label" name="searchType" value="label" />
+      <label for="label">Метка</label>
+
+      <input type="radio" id="text" name="searchType" value="text" />
+      <label for="text">Слово</label>
+
+      <div class="input_field">
+        <input id="search_field" type="text" name="query" />
+        <!-- <button id="search_button" type="submit">Поиск</button> -->
+      </div>
+        <button id="search_button">Поиск</button>
+      <!-- </form> -->
+    </div>
+
+    <!-- <div id="search">
+      <input
+        id="search_field"
+        type="text"
+        placeholder="Найти"
+        data-action="/search"
+      />
+      <button id="search_button">Поиск</button>
+    </div> -->
+
+    <div id="Create_Table"></div>
     <script src="/search.js"></script>
-</body>
+  </body>
 </html>
