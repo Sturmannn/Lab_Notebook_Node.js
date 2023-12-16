@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/navigation.css" />
+    <title>Заметки</title>
+  </head>
+  <body>
+    <%- include('navigation.ejs') %>
+    <h1>Электронная записная книжка</h1>
+    <form method="post" action="/addNote" enctype="multipart/form-data">
+      <div id="note_titles">
+        <label for="note_titles">Заголовок:</label>
+        <input
+          type="text"
+          id="note_titles"
+          name="note_titles"
+          placeholder="Здесь написан заголовок!"
+        /><br />
+      </div>
+
+      <div id="notes">
+        <label for="content">Заметка:</label>
+        <textarea
+          id="content"
+          cols="20"
+          name="content"
+          placeholder="Здесь написана заметка!"
+          required
+        ></textarea
+        ><br />
+      </div>
+
+      <div id="tags">
+        <label for="tags">Метки:</label>
+        <input
+          type="text"
+          id="tags"
+          name="tags"
+          placeholder="работа учёба семья хобби"
+        /><br />
+      </div>
+
+      <div id="fileUpload">
+        <label for="files">Загрузить файлы:</label>
+        <input type="file" name="files" multiple /><br />
+      </div>
+
+      <input type="submit" value="Добавить" />
+    </form>
+  </body>
+</html>

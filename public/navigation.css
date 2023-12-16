@@ -1,0 +1,61 @@
+/* Основные стили навигации */
+nav {
+  background-color: #383528; /* Цвет фона */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  transition: color 0.3s;
+  padding: 5px 10px; /* Отступы вокруг ссылок */
+  border-radius: 5px; /* Закругление углов */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Отображение в виде блока */
+}
+
+nav ul li {
+  display: inline; /* Отображение элементов в одну линию */
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ccb6b6;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/* Анимация при выборе пункта меню */
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+nav ul li a.active {
+  animation: scale 0.3s;
+}
+
+nav a:hover {
+  color: #ff0000;
+  background-color: #fff; /* Цвет фона при наведении */
+}
+
